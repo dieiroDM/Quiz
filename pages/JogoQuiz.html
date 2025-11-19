@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perguntas</title>
+    <link rel="stylesheet" href="../css/estiloQuiz.css">
+</head>
+<body>
+
+    <div class="quiz-card">
+        <div class="card-header">
+            <h1 id="header-title">Quiz Geral</h1>
+            <p class="progress-text" id="progress-display">Teste os seus conhecimentos</p>
+        </div>
+
+        <div class="card-body">
+            
+            <!-- TELA INICIAL -->
+            <div id="start-screen" class="screen active">
+                <p class="question-text">Perguntas e Respostas da Nossa Amizade!</p>
+                <p style="color: #666; margin-bottom: 20px;">Responda a 10 perguntas rápidas e veja a sua pontuação final.</p>
+                <button class="action-btn" onclick="startGame()">Começar Jogo</button>
+            </div>
+
+            <!-- TELA DO QUIZ -->
+            <div id="quiz-screen" class="screen">
+                <h2 id="question" class="question-text">Pergunta vai aqui?</h2>
+                <div id="options" class="options-container">
+                    <!-- Botões são gerados via JS -->
+                </div>
+            </div>
+
+            <!-- TELA DE RESULTADOS -->
+            <div id="result-screen" class="screen">
+                <p class="question-text">Terminado!</p>
+                <div class="score-display" id="final-score">0/10</div>
+                <p class="result-message" id="result-msg">Mensagem de feedback</p>
+                <button class="action-btn" onclick="restartGame()">Jogar Novamente</button>
+            </div>
+
+        </div>
+    </div>
+    <script src="../js/script.js" defer></script>
+</body>
+</html>

